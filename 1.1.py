@@ -1,3 +1,4 @@
+#merge
 class Solution:
     def mergeArray(self,a,b):
         c=[]
@@ -27,4 +28,17 @@ class Solution:
         if len(a2)>1:
             a2=self.sortArray(a2)
         return self.mergeArray(a1,a2)
-        \\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\
+#quick 
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        if len(nums)<=1:
+            return nums
+        n=random.choice(nums)
+        a=[x for x in nums if x < n]
+        c=[x for x in nums if x==n]
+        b=[x for x in nums if x>n]
+        return self.sortArray(a) +c + self.sortArray(b)
+
+\\\\\\\\\\\
+
